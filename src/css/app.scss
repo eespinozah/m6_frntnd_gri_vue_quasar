@@ -1,0 +1,16 @@
+// app global css in SCSS form
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+//utils
+@import "./utils/variables.scss";
+
+//base
+@import "./base/_background.scss";
+@import "./base/_text.scss";
+
+// components
+@import "./components/buttons.scss";
+@import "./components/tables.scss";

@@ -1,0 +1,88 @@
+.q-table__card {
+  box-shadow: none;
+  overflow: hidden;
+  background: transparent;
+}
+.table__input--light {
+  input,
+  i,
+  span {
+    color: #71717a;
+  }
+  &.q-field--standard .q-field__control {
+    &:before {
+      border-color: transparent;
+    }
+    &:hover:before {
+      border-bottom: 1px solid #71717a;
+    }
+  }
+}
+
+.table__input--dark {
+  input,
+  i,
+  span {
+    color: #f4f4f5;
+  }
+  &.q-field--standard .q-field__control {
+    &:before {
+      border-color: transparent;
+    }
+    &:hover:before {
+      border-bottom: 1px solid #f4f4f5;
+    }
+  }
+}
+
+.table__checkbox--light .q-checkbox__bg {
+  color: #6b7280;
+}
+
+.table__checkbox--dark .q-checkbox__bg {
+  color: #f3f4f6;
+}
+
+.q-checkbox__inner--truthy .q-checkbox__bg,
+.q-checkbox__inner--indet .q-checkbox__bg {
+  color: #38bdf8;
+}
+.table-icon {
+  transition: color;
+  transition-duration: 500ms;
+}
+
+.table-dark .table-icon.btn-delete:hover,
+.table-dark .table-icon.btn-edit:hover {
+  transition: border;
+  transition-duration: 500ms;
+  border: solid 2px white;
+}
+
+.table-light .table-icon.btn-delete:hover,
+.table-light .table-icon.btn-edit:hover {
+  transition: border;
+  transition-duration: 500ms;
+}
+
+.table-light .table-icon.btn-delete:hover {
+  border-color: #f87171;
+}
+
+.table-light .table-icon.btn-edit:hover {
+  border-color: #34d399;
+}
+
+.table-icon.btn-delete {
+  border-radius: 5px;
+  padding: 2px;
+  color: #f87171;
+  border: solid 2px transparent;
+}
+
+.table-icon.btn-edit {
+  color: #34d399;
+  border-radius: 5px;
+  padding: 2px;
+  border: solid 2px transparent;
+}

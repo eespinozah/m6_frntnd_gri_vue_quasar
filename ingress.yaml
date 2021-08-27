@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: gri-vue-quasar
+spec:
+  tls:
+    - secretName: m6-test-tls
+  rules:
+    - host: gri.m6-test.m-risk.com
+      http:
+        paths:
+          - backend:
+              serviceName: frntnd-gri-vue-quasar-service
+              servicePort: 8080

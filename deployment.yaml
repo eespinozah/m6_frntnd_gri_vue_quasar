@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frntnd-gri-vue-quasar
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frntnd-gri-vue-quasar
+  template:
+    metadata:
+      labels:
+        app: frntnd-gri-vue-quasar
+    spec:
+      containers:
+        - image: docker.pkg.github.com/m-risk/m6_frntnd_gri_vue_quasar/m6_frntnd_gri_vue_quasar:1.0-12
+          name: m6-frntnd-gri-vue-quasar
+          ports:
+            - name: http
+              containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
+      imagePullSecrets:
+        - name: github.docker.credentials
